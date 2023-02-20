@@ -27,18 +27,6 @@ app.use((err, req, res, next) => {
   res.status(500).send('Erreur serveur !');
 });
 
-app.use('/retro_tech/src/components/inscriptions', inscriptionsRouter);
-
-app.post('/api/users', (req, res) => {
-  const { username, email, password } = req.body;
-
-  // Insérez le code pour valider les informations utilisateur ici
-
-  // Insérez le code pour enregistrer l'utilisateur dans la base de données ici
-
-  res.status(200).json({ message: 'Utilisateur enregistré avec succès' });
-});
-
 function listen() {
   app.listen(port, () => {
     console.log(`Server running on port ${port}`);
