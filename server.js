@@ -4,14 +4,12 @@ const port = 3000;
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { createUser } = require('./api/users'); // Importer la fonction createUser depuis le module users
+const path = require('path');
 
 app.use(bodyParser.json());
 app.use(cors());
 
 // Route pour la page d'accueil
-app.get('/', (req, res) => {
-  res.send('Bienvenue sur la page d\'accueil');
-});
 
 // Route pour créer un nouvel utilisateur
 app.post('/users', createUser);

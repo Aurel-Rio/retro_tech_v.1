@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
 
 module.exports = router;
 
-const { User } = require('../models'); // Importer le modèle User
+const { User } = require('../models/user.js'); // Importer le modèle User
 
 // Définir la fonction qui gère la création d'un utilisateur
 const createUser = async (req, res) => {
